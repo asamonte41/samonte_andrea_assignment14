@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh" #loads husky's setup
+
+echo "Running Prettier, ESLint, and Tests before commit..."
+
+npm run prettier:check
+npm run lint
+npm test -- --watchAll=false
+
+echo "All checks passed — commit allowed!"

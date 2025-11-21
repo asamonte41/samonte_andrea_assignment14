@@ -1,0 +1,12 @@
+import React from "react";
+
+export interface HeroImageProps {
+  src: string;
+  alt?: string;
+  title?: string;
+  subtitle?: string;
+  disabled?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}
