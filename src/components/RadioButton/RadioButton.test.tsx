@@ -1,3 +1,4 @@
+import React from "react"; // <-- fix ESLint react/react-in-jsx-scope
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { RadioButton } from "./RadioButton";
