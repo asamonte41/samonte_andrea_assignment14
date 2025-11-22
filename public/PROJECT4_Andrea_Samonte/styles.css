@@ -1,0 +1,780 @@
+/********f************
+    
+    Project 4 Stylesheet
+    Name: Andrea Samonte
+    Date: April 18, 2025
+    Description: Project 4: Website Development & Deployment | CSS
+
+*********************/
+body {
+    font-family: "National Park", sans-serif;
+    font-weight:500;
+    font-style: normal;
+
+}
+
+
+
+/* my hamburger icon */
+#menu-button {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #5414a1;
+  }
+   
+  /* hides the checkbox */
+  #menu-toggle {
+    display: none;
+  }
+
+
+/* MEDIA QUERIES */
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Extra Small Devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+    #banner {
+        font-size: 12px;
+        padding: 8px 5px;
+    }
+    
+    #header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: flex-start;
+    }
+    
+    #logo {
+        width: 100px;
+        margin-bottom: 15px;
+    }
+    
+    form {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    #searching{
+        order: -1;
+        width: 100%;
+        margin: 10px 0;
+    }
+    #search {
+        width: calc(100% - 50px);
+        font-size: 11px;
+    }
+    
+    /* Menu toggle styling */
+    #menu-button {
+        display: block;
+    }
+    
+    #nav-1 {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    
+    #menu-toggle:checked ~ #header #nav-1 {
+        max-height: 300px; /* Adjust based on your menu height */
+    }
+    
+    #nav-1 ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    #nav-1 li {
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid #fecce2;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #nav-1 li:last-child {
+        border-bottom: none;
+    }
+    
+    #nav-1 li a {
+        display: block;
+        font-size: 16px;
+    }
+    
+    /* Change menu icon when open */
+    #menu-toggle:checked ~ #menu-button {
+        content: "✕";
+    }
+}
+
+
+
+/* BANNER & NAV HEADER */
+nav#nav-1 {
+	padding-right: 15px;
+    padding-left: 15px;
+   
+}
+
+nav#nav-1 li{
+    list-style: none;
+    display: inline-block;
+ 
+}
+
+nav#nav-1 li a{
+    margin-right: 25px;
+    text-decoration: none;
+    color: #d4287e;
+}
+
+#banner{
+    background-color: #d4287e;
+    height: 5px;
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    text-align: center;
+    
+}
+
+
+form{ 
+	height: 35px;
+    display: flex; 
+    justify-content: center;
+    margin-left: 150px;
+}
+
+#search{
+	width: 320px;
+    background-color: #fecce2;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-style: none;
+    font-size: 12px;
+    text-align:left;
+    padding-left: 10px;
+}
+
+#button{
+    background: #d4287e;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    cursor: pointer;
+    width: 50px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+#searchicon{
+    width: 15px;
+}
+
+
+div#header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#logo{
+    width: 140px;
+    padding-left: 30px;
+}
+
+/* BACKGROUND IMAGE */
+#background{
+    opacity: 10%;
+    width: 100%;  
+    position: relative;
+}
+
+
+#headerbackground h1{
+    text-align: center;
+    position:absolute;
+    margin-left: 450px;
+}
+#headerbackground p{
+    text-align: center;
+    position:absolute;
+}
+
+
+/* INDEX CSS STARTS HERE */
+
+ /*INFORMATION STYLES*/
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#introduction-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff0f0;
+    border-radius: 8px;
+    border: 2px solid  #d4287e;
+   background-image: url('images/back.png');
+   margin-bottom: 100px;
+}
+
+
+#shop-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fe56b2;
+    text-align: center;
+   
+}
+
+#shop-subtitle {
+    font-size: 1.2rem;
+    color:  #d22e88;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-style: italic;
+  
+}
+
+#intro-text {
+    margin-bottom: 1.5rem;
+}
+
+#history-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #6e0c42;
+}
+
+#history-text {
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+#philosophy-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #6e0c42;
+}
+
+#philosophy-text {
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+#approach-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #6e0c42;
+}
+
+#approach-text {
+    color: #000000;
+}
+
+#signature {
+    margin-top: 2rem;
+    text-align: right;
+    font-style: italic;
+    color: #000000;
+}
+
+
+/* THIS IS FOR THE ARTIST LISTS IN THE INDEX PAGE */
+#container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    top:10px;
+}
+
+#header2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 1rem;
+}
+
+#subtitle {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+/* Artist profiles grid */
+#artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#artist-card1, #artist-card2, #artist-card3, #artist-card4, #artist-card5 {
+    background-color: #d4287e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(144, 11, 62, 0.3);
+    transition: transform 0.3s ease;
+}
+
+#artist-card:hover {
+    transform: translateY(-5px);
+}
+
+#artist-image1, #artist-image2, #artist-image3, #artist-image4, #artist-image5 {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#artist-info1, #artist-info2, #artist-info3, #artist-info4, #artist-info5 {
+    padding: 1.5rem;
+}
+
+#artist-name1, #artist-name2, #artist-name3, #artist-name4, #artist-name5 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #f5f5f5;
+}
+
+#artist-specialty1, #artist-specialty2, #artist-specialty3, #artist-specialty4, #artist-specialty5 {
+    display: inline-block;
+    background-color: #d04b8e;
+    color: #f5f5f5;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+   
+}
+
+#artist-bio1, #artist-bio2, #artist-bio3, #artist-bio4, #artist-bio5  {
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+#social-links1, #social-links2, #social-links3, #social-links4, #social-links5 {
+    display: flex;
+    gap: 1rem;
+}
+
+#social-link1, #social-link2, #social-link3, #social-link4, #social-link5 {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#social-link1:hover, #social-link2:hover, #social-link3:hover, #social-link4:hover, #social-link5:hover {
+    color: #560505;
+}
+
+
+/* SERVICES CSS STARTS HERE */
+
+#toptext{
+    text-align: center;
+}
+
+  #product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  #product-card1, #product-card2, #product-card3, 
+  #product-card4, #product-card5, #product-card6 {
+    background-color: #f7cbdc;
+    border: 2px dashed #ffb6c1;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    text-align: center;
+    padding: 15px;
+  }
+
+  #product-card1:hover, #product-card2:hover, #product-card3:hover, 
+  #product-card4:hover, #product-card5:hover, #product-card6:hover {
+    transform: scale(1.03);
+  }
+
+  #product-img1, #product-img2, #product-img3, 
+  #product-img4, #product-img5, #product-img6 {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  #product-name1, #product-name2, #product-name3, 
+  #product-name4, #product-name5, #product-name6 {
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #f7489f;
+  }
+
+  #product-price1, #product-price2, #product-price3, 
+  #product-price4, #product-price5, #product-price6 {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #1a1a1a;
+  }
+
+  #product-price1:hover, #product-price2:hover, #product-price3:hover, 
+  #product-price4:hover, #product-price5:hover, #product-price6:hover {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #ea6969;
+  }
+
+
+
+/* CONTACTS CSS STARTS HERE */
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Page container - single column layout */
+#page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Shop header */
+#shop-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#shop-title {
+    font-size: 2.5rem;
+    color: #9d174d; /* Dark pink */
+    margin-bottom: 0.5rem;
+}
+
+#shop-tagline {
+    font-size: 1.1rem;
+    color: #db2777; /* Medium pink */
+}
+
+/* Map container */
+#map-container {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#map-title {
+    font-size: 1.5rem;
+    color: #9d174d; /* Dark pink */
+    margin-bottom: 1rem;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+#google-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Contact info */
+#contact-info {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+}
+
+#info-title {
+    font-size: 1.5rem;
+    color: #9d174d; /* Dark pink */
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+}
+
+#info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#address-container, #phone-container, #email-container, #hours-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+#address-icon, #phone-icon, #email-icon, #hours-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+}
+
+#address-title, #phone-title, #email-title, #hours-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+/* Contact form container */
+#contact-form-container {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5rem;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    padding: 1.5rem;
+    overflow: hidden; /* Prevents content from spilling out */
+}
+
+/* Success message */
+#success-message {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+#success-icon-container {
+    width: 4rem;
+    height: 4rem;
+    background-color: #d1fae5; /* Light green */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+#success-icon {
+    color: #10b981; /* Green */
+    font-size: 2rem;
+}
+
+#success-title {
+    font-size: 1.5rem;
+    color: #9d174d; /* Dark pink */
+    margin-bottom: 0.75rem;
+}
+
+#success-text {
+    color: #6b7280; /* Gray */
+    margin-bottom: 1.5rem;
+}
+
+#new-inquiry-button {
+    background-color: #ec4899; /* Pink */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#new-inquiry-button:hover {
+    background-color: #db2777; /* Darker pink */
+}
+
+/* Form content */
+#form-title {
+    font-size: 1.5rem;
+    color: #9d174d; /* Dark pink */
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-left: 3rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%; 
+    height: auto;
+    object-fit: scale-down;/* Ensures form doesn't exceed container width */
+    padding-right: 10px;
+    padding-bottom: 3rem;
+   
+    
+}
+
+#name-field, #email-field, #phone-field, #date-field, #time-field,
+#description-field, #size-field, #location-field, #file-field {
+    width: 100%;
+    padding: 0; /* Remove any padding that might cause overflow */
+    margin: 0 0 1.25rem 0; /* Add bottom margin for spacing, but no horizontal margin */
+}
+
+#name-label, #email-label, #phone-label, #date-label, #time-label,
+#description-label, #size-label, #location-label, #file-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#name, #email, #phone, #date, #time, #description, #size, #location, #file {
+    width: 60%;
+    padding: 0.75rem;
+    border: 1.5px solid #d1d5db; /* Light gray */
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    max-width: 100%; /* Ensures inputs don't exceed their container width */
+    margin: 0; /* Remove any margin that might cause overflow */
+}
+
+#name:focus, #email:focus, #phone:focus, #date:focus, #time:focus,
+#description:focus, #size:focus, #location:focus, #file:focus {
+    outline: none;
+    border-color: #ec4899; /* Pink */
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+}
+
+#name-error, #email-error, #phone-error, #date-error, #time-error,
+#description-error, #size-error, #location-error {
+    color: #ef4444; /* Red */
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: none; /* Hidden by default, shown by JavaScript */
+}
+
+#file-help {
+    font-size: 0.875rem;
+    color: #1a1a1a; /* Gray */
+    margin-top: 0.5rem;
+}
+
+/* Textarea */
+#description {  
+    min-height: 100px;
+    font-family: inherit;
+    width: 60%;
+    max-width: 100%;
+    overflow: auto; /* Ensures scrollbars appear when needed */
+}
+
+/* Submit button */
+
+
+#submit-button {
+    width: 60%;
+    background-color: #ec4899; /* Pink */
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.875rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+#submit-button:hover {
+    background-color: #db2777; /* Darker pink */
+}
+
+#submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#submit-text, #submitting-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit-icon, #loading-icon {
+    margin-right: 0.5rem;
+}
+
+#loading-icon {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Error styling */
+input.error, textarea.error, select.error {
+    border-color: #ef4444; /* Red */
+}
+
+/* Image preview styling */
+#image-preview {
+    width: 100%;
+    margin-top: 0.75rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+#image-preview img {
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    border-radius: 0.375rem;
+}
+
+
+
+/*FOOTER*/
+#footer {
+    background-color: #ffd6e8;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+}
+
+#open-hours, #contact-infos, #social-media {
+    margin: 20px 0;
+}
+
+#social-media a {
+    color: #d04b8e;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#social-media a:hover {
+    text-decoration: underline;
+}
+
+#footer-copyright {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #d04b8e; 
+}

@@ -37,7 +37,7 @@ const App: React.FC = () => {
         <HeroImage src="/images/wp2.jpg" alt="Hero banner" title="" subtitle="" />
         <div className="hero-overlay">
           <h1 className="hero-title">Andrea Samonte</h1>
-          <p className="hero-subtitle">Front-End Developer & UI/UX Designer</p>
+          <p className="hero-subtitle">Portfolio Assignment</p>
           <Button onClick={() => window.scrollTo({ top: 500, behavior: "smooth" })}>
             Explore Portfolio
           </Button>
@@ -46,7 +46,7 @@ const App: React.FC = () => {
 
       {/* Basic Info */}
       <section className="section">
-        <Img src="/images/imfine.jpg" alt="Profile" width={150} height={150} rounded />
+        <Img src="/images/me.jpg" alt="Profile" width={150} height={150} rounded />
         <Label style={{ display: "block", fontSize: "1.5rem", marginTop: "1rem" }}>
           Andrea Samonte
         </Label>
@@ -56,26 +56,55 @@ const App: React.FC = () => {
       </section>
 
       {/* Work Section */}
-      <section className="section" style={{ backgroundColor: "#f0f0f0" }}>
+      <section className="section work-section">
         <h2>Selected Projects</h2>
         <div className="cards-container">
-          <Card title="UI Dashboard" subtitle="React & TypeScript">
-            <Text>Interactive dashboard showing real-time analytics.</Text>
-            <Img src="/images/project1.jpg" alt="Dashboard" width={200} height={120} />
-            <Button style={{ marginTop: "1rem" }}>View Project</Button>
+
+          <Card className="work-card" title="Term 1 Website Project" subtitle="HTML & CSS">
+            <Img src="/images/web1.png" alt="Term 1 Website" width={200} height={120} rounded />
+            <Text>Fictional Tattoo Website built for WebDev Term 1. Used my own illustrations to create content and logo.</Text>
+            <div className="card-button-container">
+              <a
+                href="/PROJECT4_Andrea_Samonte/services.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>View Project</Button>
+              </a>
+            </div>
           </Card>
-          <Card title="Portfolio Site" subtitle="React & CSS">
-            <Text>A personal portfolio website demonstrating components and styling.</Text>
-            <Img src="/images/project2.jpg" alt="Portfolio" width={200} height={120} />
-            <Button style={{ marginTop: "1rem" }}>View Project</Button>
+
+          <Card className="work-card" title="Illustration Portfolio Site" subtitle="HTML">
+            <Img src="/images/web2.png" alt="Portfolio" width={200} height={120} rounded />
+            <Text>Illustration Portfolio Project from Term 1. It showcases my digital artworks.</Text>
+            <div className="card-button-container">
+              <a
+                href="/PROJECT2/competency1.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>View Project</Button>
+              </a>
+            </div>
           </Card>
-          <Card title="Design System" subtitle="Figma & CSS">
-            <Text>Reusable component library and design system for web apps.</Text>
-            <Img src="/images/project3.jpg" alt="Design System" width={200} height={120} />
-            <Button style={{ marginTop: "1rem" }}>View Project</Button>
+
+          <Card className="work-card" title="Hayden Planetarium" subtitle="HTML & CSS">
+            <Img src="/images/web3.png" alt="Design System" width={200} height={120} rounded />
+            <Text> Duplicating a Web page assignment as close as possible using HTML and CSS only.</Text>
+            <div className="card-button-container">
+              <a
+                href="/Project1_Andrea_Samonte (Project2_Edited)/Project1_AndreaSamonte.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>View Project</Button>
+              </a>
+            </div>
           </Card>
+
         </div>
       </section>
+
 
       {/* Skills Section */}
       <section className="section">
