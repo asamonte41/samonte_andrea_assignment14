@@ -155,3 +155,44 @@ body {
   border-radius: 10px; /* Rounded button */
   padding: 0.5rem 1rem;
 }
+
+.basic-info {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.profile-container {
+   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #fff0f5;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile-details {
+ flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skills-badges label {
+  display: inline-block;
+  background-color: #ffcacaff;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  cursor: default;
+}
+
+.contact-info text,
+.stats text {
+  display: block;
+  margin: 0.2rem 0;
+}

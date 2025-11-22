@@ -44,25 +44,56 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      {/* Basic Info */}
-      <section className="section">
-        <Img src="/images/me.jpg" alt="Profile" width={150} height={150} rounded />
-        <Label style={{ display: "block", fontSize: "1.5rem", marginTop: "1rem" }}>
-          Andrea Samonte
-        </Label>
-        <Text style={{ fontSize: "1rem", marginTop: "0.5rem" }}>
-          Passionate about creating interactive web applications and intuitive user experiences.
-        </Text>
-      </section>
+    {/* Basic Info */}
+<section className="section basic-info">
+  <div className="profile-container">
+    {/* Profile Image */}
+    <div className="profile-image">
+      <Img
+        src="/images/me.jpg"
+        alt="Andrea Samonte"
+        width={150}
+        height={150}
+        rounded
+      />
+    </div>
+
+    {/* Profile Details */}
+    <div className="profile-details">
+      <Label className="profile-name">
+        Andrea Samonte
+      </Label>
+      <Text className="profile-title">
+        Full-Stack Web Developer | UI/UX Designer
+      </Text>
+      <Text className="profile-bio">
+        Passionate about creating interactive web apps with clean code and intuitive interfaces. Experienced in React, TypeScript, Node.js, and Figma.
+      </Text>
+
+      {/* Contact Info */}
+      <div className="contact-info">
+        <Text>Email: <a href="mailto:asamonte41@academic.rrc.ca">asamonte41@academic.rrc.ca</a></Text>
+        <Text>LinkedIn: <a href="https://linkedin.com/in/andrea-samonte-2450b3381/" target="_blank" rel="noopener noreferrer">linkedin.com/in/andrea-samonte-2450b3381/</a></Text>
+        <Text>GitHub: <a href="https://github.com/asamonte41" target="_blank" rel="noopener noreferrer">github.com/asamonte41</a></Text>
+      </div>
+
+      {/* Hobbies */}
+      <Text className="profile-hobbies">
+        Hobbies: Digital Art | Photography | Baking
+      </Text>
+    </div>
+  </div>
+</section>
+
 
       {/* Work Section */}
       <section className="section work-section">
         <h2>Selected Projects</h2>
         <div className="cards-container">
 
-          <Card className="work-card" title="Term 1 Website Project" subtitle="HTML & CSS">
+          <Card className="work-card" title="Tattoo Shop Website" subtitle="HTML & CSS">
             <Img src="/images/web1.png" alt="Term 1 Website" width={200} height={120} rounded />
-            <Text>Fictional Tattoo Website built for WebDev Term 1. Used my own illustrations to create content and logo.</Text>
+            <Text>Fictional Tattoo Website built for WebDev Term 1. Used my own illustrations to create contents.</Text>
             <div className="card-button-container">
               <a
                 href="/PROJECT4_Andrea_Samonte/services.html"
