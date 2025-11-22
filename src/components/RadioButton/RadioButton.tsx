@@ -19,7 +19,11 @@ const RadioButton: React.FC<RadioButtonProps> = ({
   const opts = Array.isArray(options) ? options : [];
 
   return (
-    <div role="radiogroup" aria-label={name} style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+    <div
+      role="radiogroup"
+      aria-label={name}
+      style={{ display: "flex", gap: "1rem", alignItems: "center" }}
+    >
       {opts.map((option) => {
         const id = `${name}-${option.value}`;
 

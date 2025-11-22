@@ -21,229 +21,236 @@ ol,
 ul,
 li,
 h1,
-
-
 h6 {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	background-color: #e6e6e6;
+  background-color: #e6e6e6;
 }
 
 div#container {
-	width: 810px;
-	border-radius: 8px;
-	margin: 10px auto;
-	padding: 10px;
-	box-shadow: 1px 1px 2px #a2a2a2, -1px -1px 2px #a2a2a2;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	/* I added linear gradient for the gradient shadow effect near the bottom */
-	background: linear-gradient(to bottom, white 10%, white 95%, grey 110% );
+  width: 810px;
+  border-radius: 8px;
+  margin: 10px auto;
+  padding: 10px;
+  box-shadow:
+    1px 1px 2px #a2a2a2,
+    -1px -1px 2px #a2a2a2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* I added linear gradient for the gradient shadow effect near the bottom */
+  background: linear-gradient(to bottom, white 10%, white 95%, grey 110%);
 }
 
 div#header {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 /* Navigation 1 Starts Here */
-nav#n-1{
-	display: flex;
-	align-items: center;
-	height: 20px;
-	margin:0px auto;
-	text-align: center;
+nav#n-1 {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin: 0px auto;
+  text-align: center;
 }
 
-nav#n-1 ul{
-	list-style-type: none;
-	color: #006699;
-	display: flex;
-    align-items:center;
-	text-align: center;
+nav#n-1 ul {
+  list-style-type: none;
+  color: #006699;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
-nav#n-1 ul a{
-	text-decoration: none;
-	color: #006699;
+nav#n-1 ul a {
+  text-decoration: none;
+  color: #006699;
 }
 
-nav#n-1 ul li{
-	border-right: 1px solid #006699;
-	padding: 0px 10px;
-	font-size: 10px;
+nav#n-1 ul li {
+  border-right: 1px solid #006699;
+  padding: 0px 10px;
+  font-size: 10px;
 }
 
-nav#n-1 a:hover{
-	color: #ffa836;
+nav#n-1 a:hover {
+  color: #ffa836;
 }
 
-nav#n-1 a:focus{ /*this add a focus effect when it is clicked on */
-	color: #ee8d24;
+nav#n-1 a:focus {
+  /*this add a focus effect when it is clicked on */
+  color: #ee8d24;
 }
 
-nav#n-1 ul li:last-of-type{ /*this gets rid of the line border at the end of the links*/
-	border-right: none;
+nav#n-1 ul li:last-of-type {
+  /*this gets rid of the line border at the end of the links*/
+  border-right: none;
 }
 
 /* This is for the search button */
-form{ 
-	padding-top: 20px;
-	height: 20px;
+form {
+  padding-top: 20px;
+  height: 20px;
 }
 
 /*This is for the search box*/
-#search{
-	width: 85px;
+#search {
+  width: 85px;
 }
 
 /* This is for the header photo and the text inside */
-div.headerphoto{
-	position: relative; /* This makes the photo a parent of the text in it */
+div.headerphoto {
+  position: relative; /* This makes the photo a parent of the text in it */
 }
 
-.hphoto{ /*this will make the photo touch/close to the second navigation bar*/
-	display:block;
+.hphoto {
+  /*this will make the photo touch/close to the second navigation bar*/
+  display: block;
 }
 
-h1{
-	position: absolute;
-	top: 25px;
-	left: 26px;
-	color: white;
-	font-size: 35px;
-	letter-spacing: 6px;
-	font-weight: normal;
+h1 {
+  position: absolute;
+  top: 25px;
+  left: 26px;
+  color: white;
+  font-size: 35px;
+  letter-spacing: 6px;
+  font-weight: normal;
 }
 
-div#bottom-right{
-	position: absolute;
-	color: white;
-	right: 40px;
-	bottom: 20px;
-	font-style: italic;
-	font-size: 12px;
-	letter-spacing: 1px;
+div#bottom-right {
+  position: absolute;
+  color: white;
+  right: 40px;
+  bottom: 20px;
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 /* Navigation 2 Starts Here */
-nav#n-2{
-	display: flex;
-	justify-content: center; /* or align-items: ; */
-	align-items:center;
-	width: 100%;
-	height: 30px;
-	margin:0px auto;
-	text-align: center;
-	color: white;
-	background: linear-gradient(to bottom, #96C9FC 0%,#58A0D3 44%,#03689B 100%);
-	top: -4px;
+nav#n-2 {
+  display: flex;
+  justify-content: center; /* or align-items: ; */
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin: 0px auto;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to bottom, #96c9fc 0%, #58a0d3 44%, #03689b 100%);
+  top: -4px;
 }
 
-nav#n-2 ul{
-	list-style-type: none;
-	color: white;
-	display: flex;
-    align-items:center;
-	text-align: center;
+nav#n-2 ul {
+  list-style-type: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
-nav#n-2 ul a{
-	text-decoration: none;
-	color: white;
-	text-align: center;
+nav#n-2 ul a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
 }
 
-nav#n-2 ul li{
-	border-right: 1px solid #222840;
-	box-shadow: 1px 0px white; /*this adds the white shadow effect on the | of the navigation*/
-	padding: 0px 10px;
-	font-size: 13px;
+nav#n-2 ul li {
+  border-right: 1px solid #222840;
+  box-shadow: 1px 0px white; /*this adds the white shadow effect on the | of the navigation*/
+  padding: 0px 10px;
+  font-size: 13px;
 }
 
-nav#n-2 ul a:hover{
-	color: #2023AC;
+nav#n-2 ul a:hover {
+  color: #2023ac;
 }
 
-nav#n-2 a:focus{ 
-	color: darkblue;
+nav#n-2 a:focus {
+  color: darkblue;
 }
 
-nav#n-2 ul li:last-of-type{ /*this gets rid of the line border at the end of the links*/
-	border-right: none;
-	box-shadow: none; /*this removes the last box shadow effect*/
+nav#n-2 ul li:last-of-type {
+  /*this gets rid of the line border at the end of the links*/
+  border-right: none;
+  box-shadow: none; /*this removes the last box shadow effect*/
 }
 
 /* This is for the section under the second (blue) header */
-#contents{
-	display: flex;
+#contents {
+  display: flex;
 }
 
 /* Side Navigation 3 Starts Here */
-aside.aside-nav{
-	float: left;
-	margin-right: 30px;
-	padding-right: 30px;
-	width: 180px;
-	padding-bottom: 40px;
-	border-bottom: 1px #B7B7B7;
+aside.aside-nav {
+  float: left;
+  margin-right: 30px;
+  padding-right: 30px;
+  width: 180px;
+  padding-bottom: 40px;
+  border-bottom: 1px #b7b7b7;
 }
 
-nav#n-3{
-	width:180px;
-	padding-bottom: 40px;
-	border-bottom: 1px solid #cfcfcf; /*this is to add the line under the side navigation*/
+nav#n-3 {
+  width: 180px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #cfcfcf; /*this is to add the line under the side navigation*/
 }
 
-nav#n-3 ul{
-	display: flex;
-	flex-direction:column;
-	align-items: flex-start;
+nav#n-3 ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-nav#n-3 ul a{
-	text-decoration: none;
-	color:#484149;
-	text-align: center;
+nav#n-3 ul a {
+  text-decoration: none;
+  color: #484149;
+  text-align: center;
 }
 
-nav#n-3 ul li{
-	border-bottom: 1px #B7B7B7;
-	box-shadow: 0px 0px 0px 0px #484149; 
-	padding: 0px 10px;
-	background: linear-gradient(to bottom, #F0EFF0 0%,#DEDEDE 44%,#CDCCCD 100%);
-	width:180px;
-	font-size: 10px;
-	height: 28px;
-	list-style-position: inside; /*this place the bullet points inside the content*/
-	padding-top: 7px;
-	font-weight: bold;
-	/* list-style-tpye: none; (this is used just in case the list style is a diamond and not bullet)*/
+nav#n-3 ul li {
+  border-bottom: 1px #b7b7b7;
+  box-shadow: 0px 0px 0px 0px #484149;
+  padding: 0px 10px;
+  background: linear-gradient(to bottom, #f0eff0 0%, #dedede 44%, #cdcccd 100%);
+  width: 180px;
+  font-size: 10px;
+  height: 28px;
+  list-style-position: inside; /*this place the bullet points inside the content*/
+  padding-top: 7px;
+  font-weight: bold;
+  /* list-style-tpye: none; (this is used just in case the list style is a diamond and not bullet)*/
 }
 
-nav#n-3 ul li:last-of-type{ /*this remove the shadow on the last type */
-	border-bottom: none;
-	box-shadow:none;
+nav#n-3 ul li:last-of-type {
+  /*this remove the shadow on the last type */
+  border-bottom: none;
+  box-shadow: none;
 }
 
-nav#n-3 ul li:first-of-type{ /* this remove the bullet point on the first line */
-	list-style-type: none;	
+nav#n-3 ul li:first-of-type {
+  /* this remove the bullet point on the first line */
+  list-style-type: none;
 }
 
-nav#n-3 ul a:hover, nav#navigation3 li:hover{
-	color: white;
+nav#n-3 ul a:hover,
+nav#navigation3 li:hover {
+  color: white;
 }
 
-nav#n-3 a:focus{
-	color: blue;
+nav#n-3 a:focus {
+  color: blue;
 }
 
-nav#n-3 ul li:hover{
-	background: linear-gradient(to bottom, #f8d496 0%, #ffa836 44%, #ee8d24 100%);
+nav#n-3 ul li:hover {
+  background: linear-gradient(to bottom, #f8d496 0%, #ffa836 44%, #ee8d24 100%);
 }
 
 /* (THIS IS TO MAKE THE DIAMOND LIST STYLE 
@@ -255,205 +262,209 @@ nav#navigation3 li:not(:first-of-type)::before{
 */
 
 /* This is for the side paragraph with nasa logo */
-.aside-nav p{
-	width: 180px;
-	font-size: 11px;
-	padding-top: 10px;
-	color:grey;
+.aside-nav p {
+  width: 180px;
+  font-size: 11px;
+  padding-top: 10px;
+  color: grey;
 }
 
-.nasalogo{
-	float: right;
+.nasalogo {
+  float: right;
 }
 
 /* Article starts here */
-#contents{
-	position: relative;
-	padding-bottom: 60px;
+#contents {
+  position: relative;
+  padding-bottom: 60px;
 }
 
-.about a{
-	text-decoration: none;
-	margin-left: -15px;
-	color:  #006699;
+.about a {
+  text-decoration: none;
+  margin-left: -15px;
+  color: #006699;
 }
 
-.about a:hover, .about a:focus{
-	color:  orange;
+.about a:hover,
+.about a:focus {
+  color: orange;
 }
 
 .about p {
-	text-decoration: none;
-	font-size: 10px;
-	margin-top: 5px;
-	padding-bottom: 5px;
+  text-decoration: none;
+  font-size: 10px;
+  margin-top: 5px;
+  padding-bottom: 5px;
 }
 
-.aboutus{
-	padding-bottom: 30px;
+.aboutus {
+  padding-bottom: 30px;
 }
 
-.aboutus h2{ /*Project 2: Issue 3*/
-	font-size: 15px;
-	margin-left: -10px;
-	border-bottom: 1px solid lightgray;
+.aboutus h2 {
+  /*Project 2: Issue 3*/
+  font-size: 15px;
+  margin-left: -10px;
+  border-bottom: 1px solid lightgray;
 }
 
-.boldheader{
-	font-weight: bold;
-	font-size: 13px;
-	margin-left: -10px;
-	margin-top: -10px;
-	padding-bottom: 10px;
+.boldheader {
+  font-weight: bold;
+  font-size: 13px;
+  margin-left: -10px;
+  margin-top: -10px;
+  padding-bottom: 10px;
 }
 
-.paragraph1{
-	margin-left: -10px;
-	font-size: 12.25px;
-	padding-bottom: 13px;
-	margin-right: 30px;
-	line-height: 21px;
+.paragraph1 {
+  margin-left: -10px;
+  font-size: 12.25px;
+  padding-bottom: 13px;
+  margin-right: 30px;
+  line-height: 21px;
 }
 
-.paragraph1 a{
-	text-decoration: none;
-	color:  #006699;
-	font-weight: bold;
+.paragraph1 a {
+  text-decoration: none;
+  color: #006699;
+  font-weight: bold;
 }
 
-.paragraph1 a:hover{
-	color: orange;
+.paragraph1 a:hover {
+  color: orange;
 }
 
-.paragraph2{
-	margin-left: -10px;
-	font-size: 12.25px;
-	margin-right: 270px;
-	line-height: 21px;
+.paragraph2 {
+  margin-left: -10px;
+  font-size: 12.25px;
+  margin-right: 270px;
+  line-height: 21px;
 }
 
-.paragraph2 a{
-	text-decoration: none;
-	color:  #006699;
-	font-weight: bold;
+.paragraph2 a {
+  text-decoration: none;
+  color: #006699;
+  font-weight: bold;
 }
 
-.paragraph2 a:hover{
-	color: orange;
+.paragraph2 a:hover {
+  color: orange;
 }
 
-#paragraphlinks{
-	margin-left: 10px;
-	font-weight: bold;
-	font-size: 12px;
-	margin-top: -20px;
+#paragraphlinks {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: -20px;
 }
 
-#paragraphlinks ul li{
-	list-style-type: none;
-	line-height: 35px;
+#paragraphlinks ul li {
+  list-style-type: none;
+  line-height: 35px;
 }
 
-#paragraphlinks ul a{
-	text-decoration: none;
-	color:  #006699;
+#paragraphlinks ul a {
+  text-decoration: none;
+  color: #006699;
 }
 
-#paragraphlinks a:hover, #paragraphlinks a:focus{
-	color: orange;
-	transition: 0.5s; /* I added hover transition just for fun :) */
+#paragraphlinks a:hover,
+#paragraphlinks a:focus {
+  color: orange;
+  transition: 0.5s; /* I added hover transition just for fun :) */
 }
 
 /* Aside photo content starts here */
 #box-container {
-	position: absolute;
-	width: 263px;
-	background-color: #fff;
-	margin: 10px auto;
-	border: solid 1px lightgray;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	top: 193px;
-	right: 17px;
-	padding-bottom: 12px;
+  position: absolute;
+  width: 263px;
+  background-color: #fff;
+  margin: 10px auto;
+  border: solid 1px lightgray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  top: 193px;
+  right: 17px;
+  padding-bottom: 12px;
 }
 
-.sphoto{
-	border: 1px solid black;
-	margin-left: 6.75px;
-	margin-top: 6px;
+.sphoto {
+  border: 1px solid black;
+  margin-left: 6.75px;
+  margin-top: 6px;
 }
 
-#box-container p{
-	font-size: 11px;
-	margin-left: 6.80px;
+#box-container p {
+  font-size: 11px;
+  margin-left: 6.8px;
 }
 
 /*Footer Starts Here */
-.footercontent{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	line-height: 15px;
+.footercontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 15px;
 }
 
-#footerlist ol{
-	list-style-type: none;
-	display: flex;
-	font-size: 9px;
+#footerlist ol {
+  list-style-type: none;
+  display: flex;
+  font-size: 9px;
 }
 
-#footerlist ol li{
-	border-right: 1px solid black;
-	padding: 0px 7px;
+#footerlist ol li {
+  border-right: 1px solid black;
+  padding: 0px 7px;
 }
 
-#footerlist a{
-	text-decoration: none;
-	color:#006699;
-	text-align: center;
+#footerlist a {
+  text-decoration: none;
+  color: #006699;
+  text-align: center;
 }
 
-#footerlist ol li:last-of-type{
-	border-right: none;
+#footerlist ol li:last-of-type {
+  border-right: none;
 }
 
-#footerlist ol a:hover, #footerlist ol a:focus{
-	color: #ffa836;
+#footerlist ol a:hover,
+#footerlist ol a:focus {
+  color: #ffa836;
 }
 
-.footercontent p{
-	display: flex;
-	font-size: 9px;
+.footercontent p {
+  display: flex;
+  font-size: 9px;
 }
 
-.footercontent p a{
-	display: flex;
-	text-decoration: none;
-	color:#006699;
-	text-align: center;
+.footercontent p a {
+  display: flex;
+  text-decoration: none;
+  color: #006699;
+  text-align: center;
 }
 
-.footercontent p a:hover, .footercontent p a:focus{
-	color: #ffa836;
+.footercontent p a:hover,
+.footercontent p a:focus {
+  color: #ffa836;
 }
 
-#america{
-	margin-left: 5px;
+#america {
+  margin-left: 5px;
 }
 
-#map{
-	border-left: 1px solid black;
-	padding-left: 5px;
-	margin-left: 6px;
+#map {
+  border-left: 1px solid black;
+  padding-left: 5px;
+  margin-left: 6px;
 }
 
-#park{
-	color: grey;
+#park {
+  color: grey;
 }
-
 
 /*I added this to fix issues for Project 2 */
-input::placeholder{ /*Project 2: issues 1*/
-	opacity: 0;
+input::placeholder {
+  /*Project 2: issues 1*/
+  opacity: 0;
 }
-

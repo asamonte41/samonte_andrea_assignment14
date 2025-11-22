@@ -9,4 +9,3 @@ export interface TextProps {
   onClick?: () => void;
   size?: "sm" | "md" | "lg" | string; // <-- Add this
 }
-

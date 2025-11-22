@@ -17,12 +17,7 @@ const Text: React.FC<TextProps> = ({
   };
 
   // Map size values to actual font sizes
-  const fontSize =
-    size === "sm"
-      ? "0.8rem"
-      : size === "lg"
-      ? "1.5rem"
-      : "1rem"; // default = md
+  const fontSize = size === "sm" ? "0.8rem" : size === "lg" ? "1.5rem" : "1rem"; // default = md
 
   return (
     <span
