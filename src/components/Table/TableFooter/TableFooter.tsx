@@ -7,12 +7,9 @@ const TableFooter: React.FC<TableFooterProps> = ({
   className = "",
   style,
   onClick,
-  colSpan,
 }) => {
   const handleClick = () => {
-    if (!disabled) {
-      onClick?.();
-    }
+    if (!disabled) onClick?.();
   };
 
   return (
@@ -27,9 +24,7 @@ const TableFooter: React.FC<TableFooterProps> = ({
       }}
       onClick={handleClick}
     >
-      <tr>
-        <td colSpan={colSpan}>{children}</td>
-      </tr>
+      <tr>{children}</tr> {/* children should already be <td> */}
     </tfoot>
   );
 };

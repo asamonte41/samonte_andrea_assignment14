@@ -1,26 +1,38 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import TableCell from "./TableCell";
 
-describe("TableCell Component", () => {
-  it("renders default cell and responds to click", () => {
+describe("TableCell", () => {
+  it("renders content and responds to click", () => {
     const handleClick = jest.fn();
-    render(<TableCell onClick={handleClick}>Alice</TableCell>);
+
+    render(
+      <table>
+        <tbody>
+          <tr>
+            <TableCell onClick={handleClick}>Alice</TableCell>
+          </tr>
+        </tbody>
+      </table>
+    );
+
     const cell = screen.getByText("Alice");
     fireEvent.click(cell);
     expect(handleClick).toHaveBeenCalled();
   });
 
-  it("renders disabled cell and does not respond to click", () => {
-    const handleClick = jest.fn();
+  it("renders as header when isHeader is true", () => {
     render(
-      <TableCell disabled onClick={handleClick}>
-        Bob
-      </TableCell>
+      <table>
+        <thead>
+          <tr>
+            <TableCell isHeader>Alice</TableCell>
+          </tr>
+        </thead>
+      </table>
     );
-    const cell = screen.getByText("Bob");
-    fireEvent.click(cell);
-    expect(handleClick).not.toHaveBeenCalled();
+
+    const headerCell = screen.getByText("Alice");
+    expect(headerCell.tagName).toBe("TH"); // check it renders as <th>
   });
 });

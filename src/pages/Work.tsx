@@ -1,8 +1,17 @@
 import React from "react";
 import { Card, Text, Img, Button } from "../components";
 
-export default function Work() {
-  const projects = [
+interface Project {
+  title: string;
+  subtitle: string;
+  imgSrc: string;
+  imgAlt: string;
+  description: string;
+  link: string;
+}
+
+const Work: React.FC = () => {
+  const projects: Project[] = [
     {
       title: "Tattoo Shop Website",
       subtitle: "HTML & CSS",
@@ -34,8 +43,10 @@ export default function Work() {
 
   return (
     <section className="section work-section">
+      {/* Section Title */}
       <Text className="text-2xl font-bold mb-4">Selected Projects</Text>
 
+      {/* Project Cards */}
       <div className="cards-container flex gap-4 flex-wrap">
         {projects.map((project) => (
           <Card
@@ -65,4 +76,6 @@ export default function Work() {
       </div>
     </section>
   );
-}
+};
+
+export default Work;

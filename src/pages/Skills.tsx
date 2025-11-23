@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { Card, Text, Button } from "../components"; // Only using existing components
 
-export default function Skills() {
-  const [selectedSkill, setSelectedSkill] = useState<null | {
-    name: string;
-    description: string;
-    category: string;
-    tools: string;
-  }>(null);
+interface Skill {
+  name: string;
+  description: string;
+  category: string;
+  tools: string;
+}
 
-  const skills = [
+const Skills: React.FC = () => {
+  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
+
+  const skills: Skill[] = [
     {
       name: "React",
       description:
@@ -81,4 +83,6 @@ export default function Skills() {
       )}
     </section>
   );
-}
+};
+
+export default Skills;

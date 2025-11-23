@@ -18,7 +18,7 @@ const Table: React.FC<TableProps> = ({
             <th
               key={index}
               style={{
-                borderBottom: "1px solid #ccc",
+                borderBottom: "2px solid #ccc",
                 padding: "0.5rem",
                 textAlign: "left",
               }}

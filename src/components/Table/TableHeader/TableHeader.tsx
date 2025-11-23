@@ -11,9 +11,7 @@ const TableHeader: React.FC<TableHeaderProps> = ({
   onClick,
 }) => {
   const handleClick = () => {
-    if (!disabled) {
-      onClick?.();
-    }
+    if (!disabled) onClick?.();
   };
 
   return (

@@ -10,9 +10,7 @@ const TableRow: React.FC<TableRowProps> = ({
   children,
 }) => {
   const handleClick = () => {
-    if (!disabled) {
-      onClick?.();
-    }
+    if (!disabled) onClick?.();
   };
 
   return (

@@ -1,19 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 // Components
-import { Navbar } from "./components";
+import Navbar from "./components/Navbar"; // default import
 
 // Pages
-import { Home, Work, Skills, Resources, Setup } from "./pages";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import Skills from "./pages/Skills";
+import Resources from "./pages/Resources";
+import Setup from "./pages/Setup";
 
 const App: React.FC = () => {
   return (
-    <Router>
-      {" "}
+    <BrowserRouter>
       <Navbar />
-      <div className="page-container">
+      <main className="page-container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
@@ -21,8 +24,8 @@ const App: React.FC = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/setup" element={<Setup />} />
         </Routes>
-      </div>
-    </Router>
+      </main>
+    </BrowserRouter>
   );
 };
 

@@ -12,9 +12,7 @@ const TableCell: React.FC<TableCellProps> = ({
   isHeader = false,
 }) => {
   const handleClick = () => {
-    if (!disabled) {
-      onClick?.();
-    }
+    if (!disabled) onClick?.();
   };
 
   const CellTag = isHeader ? "th" : "td";
