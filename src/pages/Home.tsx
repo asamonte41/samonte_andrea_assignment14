@@ -7,55 +7,65 @@ import { Text } from "../components/Text";
 const Home = () => {
   return (
     <>
-      {" "}
-      <div className="hero-section">
-        {" "}
-        <HeroImage src="/images/wp2.jpg" />{" "}
-        <div className="hero-overlay">
-          {" "}
-          <h1 className="hero-title">Portfolio Assignment</h1>{" "}
-          <p className="hero-subtitle">
+      {/* ✨ Hero Section */}
+      <div className="home-hero-section">
+        <HeroImage src="/images/wp2.jpg" />
+        <div className="home-hero-overlay">
+          <h1 className="page-title">Portfolio Assignment</h1>
+          <p className="home-hero-subtitle">
             Business Systems Build and Testing
-          </p>{" "}
-        </div>{" "}
+          </p>
+        </div>
       </div>
-      <section className="section basic-info">
-        <div className="basic-info-card fade-in">
-          <div className="basic-info-img">
+
+      {/* 🍡 Basic Info Card */}
+      <section className="home-info">
+        <div className="home-info-card">
+          {/* Profile Image */}
+          <div className="home-profile-img">
             <Img
               src="/images/me.jpg"
               alt="Andrea"
-              width={160}
-              height={160}
+              width={200}
+              height={300}
               rounded
             />
           </div>
 
-          <div className="basic-info-content">
-            <Label className="name-title">Andrea Samonte</Label>
+          {/* Info Content */}
+          <div className="home-info-details">
+            <Label className="home-name">Andrea Samonte</Label>
 
-            <Text className="role-title">
+            <Text className="home-role">
               Full-Stack Web Developer | UI/UX Designer
             </Text>
 
-            <Text className="bio">
+            <Text className="home-bio">
               Passionate about creating interactive web apps with clean code and
-              intuitive interfaces.
+              intuitive interfaces. Building beautiful things that work well is
+              my favorite thing!
             </Text>
 
-            <div className="contact-list">
+            {/* Contact */}
+            <div className="home-contact">
               <Text>📧 asamonte41@academic.rrc.ca</Text>
               <Text>💼 linkedin.com/in/andrea-samonte-2450b3381/</Text>
               <Text>💻 github.com/asamonte41</Text>
             </div>
 
-            <div className="hobby-container">
-              <span className="hobby-badge">🎨 Digital Art</span>
-              <span className="hobby-badge">📸 Photography</span>
-              <span className="hobby-badge">🍰 Baking</span>
+            {/* Hobbies */}
+            <div className="home-hobbies">
+              <span className="home-hobby-badge">🎨 Digital Art</span>
+              <span className="home-hobby-badge">📸 Photography</span>
+              <span className="home-hobby-badge">🍰 Baking</span>
             </div>
           </div>
         </div>
+
+        {/* Sparkles floating */}
+        <div className="home-sparkle sparkle-1">✧</div>
+        <div className="home-sparkle sparkle-2">✦</div>
+        <div className="home-sparkle sparkle-3">✺</div>
       </section>
     </>
   );

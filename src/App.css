@@ -69,115 +69,202 @@ body {
 }
 
 /* =============================
-   Hero Section
+Baisc Info Page
 ============================= */
-.hero-section {
+/* 🍓 Kawaii Pastel Theme */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;700&display=swap");
+
+/* 🌸 Apply to page */
+.home-info {
+  position: relative;
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(135deg, #ffeef8 0%, #fff5fa 50%, #ffe5f4 100%);
+  font-family: "Quicksand", "Nunito", sans-serif;
+}
+
+/* 💖 Hero Section */
+.home-hero-section {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 380px;
   overflow: hidden;
 }
 
-.hero-section img,
-.hero-section .hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  filter: brightness(0.85);
-  animation: fadeIn 1s ease forwards;
-}
-
-.hero-overlay {
+.home-hero-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
+  inset: 0;
+  background: rgba(255, 235, 245, 0.55);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-title {
+.home-hero-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #ff6f91;
-  text-shadow: 2px 2px #ffd6d6;
-  animation: bounce 1s infinite alternate;
+  color: #ff69b4;
+  text-shadow: 2px 2px 5px rgba(255, 115, 170, 0.2);
 }
 
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-top: 0.5rem;
-  color: #fff0f5;
+.home-hero-subtitle {
+  font-size: 1.3rem;
+  color: #ff85c3;
+  font-weight: 600;
+  margin-top: 0.4rem;
 }
 
-/* =============================
-   Sections
-============================= */
-.section {
-  padding: 3rem 2rem;
-}
-
-.section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #ff6f91;
-}
-
-/* =============================
-   Basic Info Card
-============================= */
-.basic-info-card {
+/* 🍡 Profile Card */
+.home-info-card {
+  background: linear-gradient(145deg, #fff8fa, #ffeef5);
+  max-width: 750px;
+  margin: 3rem auto 0;
+  padding: 2.5rem;
+  border-radius: 25px;
+  border: 4px solid white;
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.08),
+    -4px -4px 12px rgba(255, 255, 255, 0.75);
   display: flex;
-  align-items: center;
-  background-color: #fff0f5;
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
   gap: 2rem;
-  animation: fadeIn 1s ease forwards;
+  animation: slideUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+/* Profile Image */
+.home-profile-img {
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid #ffb7d7;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.25);
+}
+
+.basic-info-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid #ffb3da;
 }
 
 .basic-info-img img {
-  border-radius: 50%;
-  border: 3px solid #ffb6c1;
-  transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fills the box while cropping */
+  display: block;
 }
 
-.basic-info-img img:hover {
-  transform: scale(1.05) rotate(2deg);
+/* Text block */
+.home-info-details {
+  flex: 1;
 }
 
-.basic-info-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.name-title {
-  font-size: 1.5rem;
+/* Name */
+.home-name {
+  font-size: 2rem;
+  color: #ff69b4;
   font-weight: 700;
-  color: #ff6f91;
+  letter-spacing: 0.8px;
 }
 
-.role-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #ff92a9;
+/* Role */
+.home-role {
+  display: block;
+  font-size: 1.2rem;
+  color: #ff8fc8;
+  font-weight: 600;
+  margin-top: 0.3rem;
+  margin-bottom: 0.75rem;
 }
 
-.bio {
+/* Bio */
+.home-bio {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.3rem;
+  line-height: 1.55;
+}
+
+/* Contact */
+.home-contact > * {
+  display: block;
+  margin: 0.25rem 0;
+  color: #444;
   font-size: 0.95rem;
-  color: #555;
 }
 
-.contact-list {
+/* Hobbies */
+.home-hobbies {
+  margin-top: 1rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  margin-top: 0.5rem;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.home-hobby-badge {
+  background: linear-gradient(135deg, #ffc1df, #ff9fcf);
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  color: white;
+  font-weight: 700;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.25);
   font-size: 0.9rem;
+}
+
+/* ✨ Sparkles */
+.home-sparkle {
+  position: absolute;
+  font-size: 2rem;
+  color: #ff92d3;
+  opacity: 0.7;
+  animation: sparkleFloat 6s ease-in-out infinite;
+}
+
+@keyframes sparkleFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-12px) rotate(6deg);
+  }
+}
+
+.sparkle-1 {
+  top: 8%;
+  left: 6%;
+}
+.sparkle-2 {
+  top: 22%;
+  right: 10%;
+}
+.sparkle-3 {
+  bottom: 6%;
+  left: 15%;
+}
+
+/* 📱 Responsive */
+@media (max-width: 720px) {
+  .home-info-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 /* =============================

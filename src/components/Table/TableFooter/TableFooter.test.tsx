@@ -2,19 +2,25 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import TableFooter from "./TableFooter";
 
-describe("TableFooter", () => {
-  it("renders children correctly and responds to click", () => {
+describe("TableFooter component", () => {
+  test("renders footer and handles click", () => {
     const handleClick = jest.fn();
 
     render(
       <table>
-        <TableFooter onClick={handleClick}>
-          <td>Footer Content</td> {/* td is direct child of tr */}
-        </TableFooter>
+        <tfoot>
+          <tr>
+            <td>
+              <TableFooter onClick={handleClick}>Footer Content</TableFooter>
+            </td>
+          </tr>
+        </tfoot>
       </table>
     );
 
-    const footerCell = screen.getByText("Footer Content");
+    const footerCell = screen.getByText(/Footer Content/i);
+    expect(footerCell).toBeInTheDocument();
+
     fireEvent.click(footerCell);
     expect(handleClick).toHaveBeenCalled();
   });
