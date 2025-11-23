@@ -1,87 +1,174 @@
 import React, { useState } from "react";
-import { Card, Text, Button } from "../components"; // Only using existing components
+import "../App.css";
 
 interface Skill {
   name: string;
   description: string;
   category: string;
-  tools: string;
+  tools: string[];
 }
 
-const Skills: React.FC = () => {
-  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
+const skills: Skill[] = [
+  {
+    name: "React",
+    description: "Building interactive UI with reusable components.",
+    category: "Frontend",
+    tools: ["React", "Vite", "TypeScript", "CSS Modules"],
+  },
+  {
+    name: "UI/UX",
+    description: "User-centered design focused on accessibility and emotion.",
+    category: "Design",
+    tools: ["Figma", "Adobe XD", "Miro"],
+  },
+  {
+    name: "Web Development",
+    description: "Full-stack websites using modern standards.",
+    category: "Full Stack",
+    tools: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+  },
+  {
+    name: "Python",
+    description:
+      "Versatile programming language for web, scripting, and data science.",
+    category: "Backend / Language",
+    tools: ["Python 3", "Flask", "Django", "Pandas", "NumPy"],
+  },
+  {
+    name: "Git/GitHub",
+    description: "Version control and collaboration for projects.",
+    category: "Dev Tools",
+    tools: ["Git", "GitHub", "Branches", "Pull Requests"],
+  },
+  {
+    name: "Digital Art / Illustration",
+    description: "Creating artwork and assets for web and design projects.",
+    category: "Design",
+    tools: ["Procreate", "Adobe Illustrator", "Photoshop"],
+  },
+  {
+    name: "Photography",
+    description: "Capturing and editing photos with composition and style.",
+    category: "Design / Hobby",
+    tools: ["DSLR", "Lightroom", "Photoshop"],
+  },
+];
 
-  const skills: Skill[] = [
-    {
-      name: "React",
-      description:
-        "A JavaScript library for building fast and interactive UIs.",
-      category: "Front-End",
-      tools: "React Router, Hooks, Zustand, Axios",
-    },
-    {
-      name: "Node.js",
-      description:
-        "Server-side JavaScript runtime used to build scalable backend services.",
-      category: "Backend",
-      tools: "Express.js, JWT, MongoDB, REST APIs",
-    },
-    {
-      name: "UI/UX",
-      description: "Focused on designing intuitive and clean user experiences.",
-      category: "Design",
-      tools: "Figma, Adobe XD, Prototyping",
-    },
-    {
-      name: "TypeScript",
-      description:
-        "A typed superset of JavaScript that enhances development reliability.",
-      category: "Language",
-      tools: "ts-node, type definitions, interfaces",
-    },
-  ];
+const Skills = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedTab, setSelectedTab] = useState<string>("description");
+
+  const currentSkill = skills[currentIndex];
+
+  const nextSkill = () => {
+    setCurrentIndex((prev) => (prev + 1) % skills.length);
+    setSelectedTab("description");
+  };
+
+  const prevSkill = () => {
+    setCurrentIndex((prev) => (prev - 1 + skills.length) % skills.length);
+    setSelectedTab("description");
+  };
 
   return (
-    <section className="section skills-section">
-      {/* Section Title */}
-      <Text className="text-2xl font-bold mb-4">Skills</Text>
+    <div className="skills-page">
+      <h1 className="page-title">My Skills</h1>
 
-      {/* Skill Buttons */}
-      <div className="flex gap-2 flex-wrap mb-4">
-        {skills.map((skill) => (
-          <Button
-            key={skill.name}
-            onClick={() => setSelectedSkill(skill)}
-            className="px-3 py-1 rounded-lg hover:scale-105 transition-all duration-200"
-          >
-            {skill.name}
-          </Button>
-        ))}
+      <div className="skills-showcase">
+        <button className="nav-button nav-button-left" onClick={prevSkill}>
+          ❮
+        </button>
+
+        <div className="skill-display-card">
+          <div className="skill-header">
+            <h2 className="skill-title">{currentSkill.name}</h2>
+            <span className="skill-icon">✿</span>
+          </div>
+
+          <div className="skill-counter">
+            {currentIndex + 1} / {skills.length}
+          </div>
+
+          <div className="skill-radio-group">
+            <label className="radio-option">
+              <input
+                type="radio"
+                name="skill-view"
+                value="description"
+                checked={selectedTab === "description"}
+                onChange={() => setSelectedTab("description")}
+              />
+              <span className="radio-label">📝 About</span>
+            </label>
+
+            <label className="radio-option">
+              <input
+                type="radio"
+                name="skill-view"
+                value="category"
+                checked={selectedTab === "category"}
+                onChange={() => setSelectedTab("category")}
+              />
+              <span className="radio-label">🏷️ Category</span>
+            </label>
+
+            <label className="radio-option">
+              <input
+                type="radio"
+                name="skill-view"
+                value="tools"
+                checked={selectedTab === "tools"}
+                onChange={() => setSelectedTab("tools")}
+              />
+              <span className="radio-label">🛠️ Tools</span>
+            </label>
+          </div>
+
+          <div className="skill-content">
+            {selectedTab === "description" && (
+              <div className="content-box">
+                <p className="content-text">{currentSkill.description}</p>
+              </div>
+            )}
+
+            {selectedTab === "category" && (
+              <div className="content-box content-center">
+                <div className="category-badge">{currentSkill.category}</div>
+              </div>
+            )}
+
+            {selectedTab === "tools" && (
+              <div className="content-box">
+                <div className="tools-grid">
+                  {currentSkill.tools.map((tool) => (
+                    <span key={tool} className="tool-item">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="skill-dots">
+            {skills.map((_, index) => (
+              <button
+                key={index}
+                className={`dot ${index === currentIndex ? "active" : ""}`}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setSelectedTab("description");
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        <button className="nav-button nav-button-right" onClick={nextSkill}>
+          ❯
+        </button>
       </div>
-
-      {/* Skill Info Card */}
-      {selectedSkill && (
-        <Card className="mt-4 p-4" style={{ borderRadius: "12px" }}>
-          <Text className="text-xl font-semibold">{selectedSkill.name}</Text>
-          <Text className="mt-2">
-            <strong>Description:</strong> {selectedSkill.description}
-          </Text>
-          <Text className="mt-1">
-            <strong>Category:</strong> {selectedSkill.category}
-          </Text>
-          <Text className="mt-1">
-            <strong>Tools:</strong> {selectedSkill.tools}
-          </Text>
-
-          <Button
-            onClick={() => setSelectedSkill(null)}
-            className="mt-3 text-sm underline text-blue-600"
-          >
-            Close
-          </Button>
-        </Card>
-      )}
-    </section>
+    </div>
   );
 };
 

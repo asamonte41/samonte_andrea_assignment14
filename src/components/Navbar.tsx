@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   return (
     <nav role="navigation" className="navbar">
       {/* Logo */}
-      <h2 className="logo">Andrea Dev</h2>
+      <h2 className="logo">Andrea&apos;s Portfolio</h2>
 
       {/* Navigation Links */}
       <ul className="nav-links">
