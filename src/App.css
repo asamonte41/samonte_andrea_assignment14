@@ -23,8 +23,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #ffe4e1; /* soft coral/pink */
-  border-bottom: 2px solid #ffd6d6;
+  background-color: #f7f1e8; /* soft coral/pink */
+  border-bottom: 2px solid #f7f1e8;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -61,7 +61,7 @@ body {
 
 .page-title {
   font-size: 2.5rem;
-  color: #ff7ab6; /* soft cute pink */
+  color: #600830; /* soft cute pink */
   text-align: center;
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -111,7 +111,7 @@ Baisc Info Page
 
 .home-hero-subtitle {
   font-size: 1.3rem;
-  color: #ff85c3;
+  color: #850243;
   font-weight: 600;
   margin-top: 0.4rem;
 }
@@ -256,6 +256,10 @@ Baisc Info Page
 .sparkle-3 {
   bottom: 6%;
   left: 15%;
+}
+.sparkle-4 {
+  top: 8%;
+  left: 6%;
 }
 
 /* 📱 Responsive */

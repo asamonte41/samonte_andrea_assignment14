@@ -12,6 +12,17 @@
 #Run the production build in a Docker container on a specific port.
 #Apply Husky, Prettier, ESLint and CI/CD best practices for a professional development workflow.
 
+
+# - ISNTALL REACT ROUTER DOM -
+
+#Before setting up routing, install React Router DOM:
+# npm install react-router-dom
+
+#Use <Link> components from react-router-dom for navigation:
+# import { Link } from "react-router-dom";
+#<Link to="work">My Work</Link>
+
+
 # - STEP 1: BUILD PRODUCTION VERSION -
 
 #Ensure you are in the root of your React project.

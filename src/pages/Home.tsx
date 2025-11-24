@@ -9,7 +9,7 @@ const Home = () => {
     <>
       {/* ✨ Hero Section */}
       <div className="home-hero-section">
-        <HeroImage src="/images/wp2.jpg" />
+        <HeroImage src="/images/header.png" />
         <div className="home-hero-overlay">
           <h1 className="page-title">Portfolio Assignment</h1>
           <p className="home-hero-subtitle">
@@ -37,7 +37,7 @@ const Home = () => {
             <Label className="home-name">Andrea Samonte</Label>
 
             <Text className="home-role">
-              Full-Stack Web Developer | UI/UX Designer
+              Full-Stack Web Developer | Graphic Designer
             </Text>
 
             <Text className="home-bio">
@@ -63,9 +63,14 @@ const Home = () => {
         </div>
 
         {/* Sparkles floating */}
-        <div className="home-sparkle sparkle-1">✧</div>
-        <div className="home-sparkle sparkle-2">✦</div>
+        <div className="home-sparkle sparkle-1">₊⊹</div>
+        <div className="home-sparkle sparkle-2">★</div>
         <div className="home-sparkle sparkle-3">✺</div>
+        <div className="home-sparkle sparkle-4">⋆˚꩜｡</div>
+        <div className="home-sparkle sparkle-5">⋆˚✿˖°</div>
+        <div className="home-sparkle sparkle-6">⋆˚࿔</div>
+        <div className="home-sparkle sparkle-7">❤︎</div>
+
       </section>
     </>
   );
