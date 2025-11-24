@@ -38,7 +38,7 @@ const Setup = () => {
                   <div className="detail-section">
                     <p className="detail-label">Theme & Appearance</p>
                     <p>
-                      • <strong>Color Theme:</strong> One Dark Pro / Tokyo Night
+                      • <strong>Color Theme:</strong> Cute Pink Light Theme
                     </p>
                     <p>
                       • <strong>Icon Theme:</strong> Material Icon Theme
@@ -58,17 +58,12 @@ const Setup = () => {
                       • <strong>Productivity:</strong> Auto Rename Tag, Live
                       Server, GitLens
                     </p>
-                    <p>
-                      • <strong>Visual:</strong> Indent Rainbow, Bracket Pair
-                      Colorizer
-                    </p>
                   </div>
                   <div className="detail-section">
                     <p className="detail-label">Settings</p>
-                    <p>• Auto-save: afterDelay (1000ms)</p>
-                    <p>• Format on save enabled</p>
+                    <p>• Auto-save enabled</p>
+                    <p>• Format on save</p>
                     <p>• Tab size: 2 spaces</p>
-                    <p>• Smooth scrolling & cursor blinking</p>
                   </div>
                 </div>
               </TableCell>
@@ -86,39 +81,20 @@ const Setup = () => {
                   <div className="detail-section">
                     <p className="detail-label">Windows Terminal</p>
                     <p>
-                      • <strong>Default Profile:</strong> PowerShell Core 7+
+                      • <strong>Default Profile:</strong> Windows Terminal or
+                      Powershell Core
                     </p>
                     <p>
                       • <strong>Color Scheme:</strong> One Half Dark / Campbell
-                      Powershell
                     </p>
                     <p>
-                      • <strong>Font:</strong> Cascadia Code NF (Nerd Font)
+                      • <strong>Font:</strong> Cascadia Code or Fira Code
                     </p>
                     <p>
-                      • <strong>Appearance:</strong> Acrylic transparency at
-                      80%, cursor shape: vintage
+                      • <strong>Cursor Style:</strong> Block or Vintage
                     </p>
                   </div>
-                  <div className="detail-section">
-                    <p className="detail-label">PowerShell Customization</p>
-                    <p>
-                      • <strong>Prompt:</strong> Oh My Posh with
-                      &apos;jandedobbeleer&apos; theme
-                    </p>
-                    <p>
-                      • <strong>Modules:</strong> PSReadLine for syntax
-                      highlighting
-                    </p>
-                    <p>
-                      • <strong>Aliases:</strong> Custom shortcuts (ll, gs, gp,
-                      gc)
-                    </p>
-                    <p>
-                      • <strong>Auto-completion:</strong> Predictive
-                      IntelliSense enabled
-                    </p>
-                  </div>
+
                   <div className="detail-section">
                     <p className="detail-label">Additional Profiles</p>
                     <p>• Git Bash for Unix-style commands</p>
@@ -148,64 +124,72 @@ const Setup = () => {
                     <tbody>
                       <TableRow
                         cells={[
-                          "Fira Code",
-                          "Monospace with ligatures",
-                          "Coding, clean & modern",
+                          "Roboto",
+                          "Sans-serif",
+                          "Versatile, clean & readable for all coding",
                         ]}
                       />
                       <TableRow
                         cells={[
-                          "JetBrains Mono",
-                          "Geometric monospace",
-                          "Long coding sessions",
+                          "Lato",
+                          "Sans-serif",
+                          "Lightweight and modern, good for long coding sessions",
                         ]}
                       />
                       <TableRow
                         cells={[
-                          "Cascadia Code",
-                          "Rounded monospace",
-                          "Terminal & editor",
+                          "Montserrat",
+                          "Sans-serif",
+                          "Stylish headings and readable code",
                         ]}
                       />
                       <TableRow
                         cells={[
-                          "MonoLisa",
-                          "Humanist monospace",
-                          "Reduced eye strain",
+                          "Sour Gummy",
+                          "Display / Sans-serif",
+                          "Fun, playful, casual coding",
                         ]}
                       />
                       <TableRow
                         cells={[
-                          "Comic Code",
-                          "Playful monospace",
-                          "Fun & casual coding",
+                          "Open Sans",
+                          "Sans-serif",
+                          "Clean and simple, great for readability",
                         ]}
                       />
                       <TableRow
                         cells={[
-                          "Victor Mono",
-                          "Cursive italics",
-                          "Elegant & unique",
+                          "Poppins",
+                          "Geometric Sans-serif",
+                          "Modern look, minimal and clean",
                         ]}
                       />
                       <TableRow
                         cells={[
-                          "Dank Mono",
-                          "Italic emphasis",
-                          "Stylish coding",
+                          "Raleway",
+                          "Sans-serif",
+                          "Elegant, professional coding style",
                         ]}
                       />
                       <TableRow
                         cells={[
-                          "Operator Mono",
-                          "Script italics",
-                          "Premium feel",
+                          "Nunito",
+                          "Sans-serif",
+                          "Rounded, friendly look for casual projects",
+                        ]}
+                      />
+                      <TableRow
+                        cells={[
+                          "Inter",
+                          "Sans-serif",
+                          "Highly legible, optimized for screens",
                         ]}
                       />
                     </tbody>
                   </table>
                   <p className="font-note">
-                    <strong>Current Choice:</strong> Fira Code at size 14.
+                    <strong>Current Choice:</strong> Quicksand at size
+                    48px/3rem.
                   </p>
                 </div>
               </TableCell>

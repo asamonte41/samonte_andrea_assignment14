@@ -64,13 +64,8 @@ const Home = () => {
 
         {/* Sparkles floating */}
         <div className="home-sparkle sparkle-1">₊⊹</div>
-        <div className="home-sparkle sparkle-2">★</div>
-        <div className="home-sparkle sparkle-3">✺</div>
-        <div className="home-sparkle sparkle-4">⋆˚꩜｡</div>
-        <div className="home-sparkle sparkle-5">⋆˚✿˖°</div>
-        <div className="home-sparkle sparkle-6">⋆˚࿔</div>
-        <div className="home-sparkle sparkle-7">❤︎</div>
-
+        <div className="home-sparkle sparkle-2">⋆˚꩜｡</div>
+        <div className="home-sparkle sparkle-3">⋆˚✿˖°</div>
       </section>
     </>
   );

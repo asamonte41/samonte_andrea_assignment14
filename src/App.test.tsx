@@ -1,17 +1,16 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import App from "./App";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
+import Work from "./pages/Work"; // example page
 
-describe("App component", () => {
-  test("renders the selected projects page title", () => {
-    render(
-      <MemoryRouter>
-        <App />
-      </MemoryRouter>
-    );
+test("renders the selected projects page title", () => {
+  render(
+    <MemoryRouter initialEntries={["/work"]}>
+      <Routes>
+        <Route path="/work" element={<Work />} />
+      </Routes>
+    </MemoryRouter>
+  );
 
-    const titleElement = screen.getByText(/Selected Projects/i);
-    expect(titleElement).toBeInTheDocument();
-  });
+  const title = screen.getByText(/Selected Projects/i);
+  expect(title).toBeInTheDocument();
 });
